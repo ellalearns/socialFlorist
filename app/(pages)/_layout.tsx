@@ -1,12 +1,12 @@
 import { Tabs } from "expo-router";
-import { Text, View } from "react-native";
+import { forwardRef } from "react";
+import { Pressable, Text, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
 
 export default function _Layout() {
     return (
         <Tabs
             screenOptions={{
                 headerShown: false,
-                // tabBarBackground: () => null,
                 tabBarStyle: {
                     backgroundColor: "transparent",
                     position: "absolute",
@@ -22,7 +22,8 @@ export default function _Layout() {
                     paddingLeft: 16,
                     paddingRight: 16
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                // tabBarButton: (props) => <NoRipple {...props} />
             }}
 
         >
@@ -82,6 +83,9 @@ const TabItem = ({ title, focused }: any) => {
     const background = focused ? "white" : ""
 
     return (
+        // <Pressable style={{
+            // backgroundColor: "yellow"
+        // }}>
         <View style={{
             backgroundColor: background,
             width: 80,
@@ -96,6 +100,14 @@ const TabItem = ({ title, focused }: any) => {
                 alignSelf: "center"
             }}>{title}</Text>
         </View>
+        // </Pressable>
     )
 }
 
+const NoRipple = forwardRef<any, any>(({ children, ...props }, ref) => {
+    return (
+        <TouchableWithoutFeedback ref={ref} {...props}>
+            {children}
+        </TouchableWithoutFeedback>
+    )
+})

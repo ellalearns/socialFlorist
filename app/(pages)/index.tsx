@@ -5,7 +5,11 @@ import GradientBackground from "@/components/GradientBackground"
 export default function Index() {
   return (
     <GradientBackground>
-      <View></View>
+      <View
+      style={{
+        padding: 24
+      }}
+      ></View>
     </GradientBackground>
   )
 }

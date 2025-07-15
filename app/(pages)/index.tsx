@@ -1,7 +1,8 @@
-import { ImageBackground, View, SafeAreaView, Image, Text, TouchableOpacity } from "react-native"
+import { View, Image, Text, TouchableOpacity } from "react-native"
 import images from "@/constants/images"
 import GradientBackground from "@/components/GradientBackground"
 import Header from "@/components/Header"
+import ProfileDetail from "@/components/ProfileDetail"
 
 export default function Index() {
   return (
@@ -13,14 +14,16 @@ export default function Index() {
           width: "100%",
           marginTop: 36,
           flex: 1,
-          justifyContent: "space-evenly"
+          justifyContent: "space-between",
+          paddingBottom: 185
         }}
       >
         <Header />
+
         <View style={{
-          // backgroundColor: "grey",
-          height: "30%",
-          width: "70%"
+          marginTop: 100,
+          height: 270,
+          width: 270
         }}>
           <View style={{
             borderRadius: 50
@@ -56,6 +59,29 @@ export default function Index() {
             </TouchableOpacity>
           </View>
         </View>
+
+        <View>
+
+        <View>
+          <Text style={{
+            fontSize: 60,
+            fontWeight: "bold",
+            color: "white"
+          }}>Margaretha Collins</Text>
+        </View>
+
+        <View style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "85%"
+        }}>
+          <ProfileDetail detail={"275K"} icon={images.user} />
+          <ProfileDetail detail={"2,923"} icon={images.gallery} />
+          <ProfileDetail detail={"581"} icon={images.user} />
+        </View>
+
+        </View>
+
       </View>
     </GradientBackground>
   )

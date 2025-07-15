@@ -1,12 +1,29 @@
 const images = {
     one: require("../assets/images/1.png"),
+    two: require("@/assets/images/2.png"),
+    three: require("@/assets/images/3.png"),
+    four: require("@/assets/images/4.png"),
+    five: require("@/assets/images/5.png"),
+    six: require("@/assets/images/6.png"),
+    seven: require("@/assets/images/7.png"),
+    eight: require("@/assets/images/8.png"),
+    nine: require("@/assets/images/9.png"),
+    ten: require("@/assets/images/10.png"),
+    eleven: require("@/assets/images/11.png"),
+    twelve: require("@/assets/images/12.png"),
+    thirteen: require("@/assets/images/13.png"),
+    fourteen: require("@/assets/images/14.png"),
+    fifteen: require("@/assets/images/15.png"),
     gradient: require("../assets/images/gradient.png"),
     back: require("@/assets/images/back-button.png"),
     menu: require("@/assets/images/menu-button.png"),
     user: require("@/assets/images/user.png"),
     mainPic: require("@/assets/images/mainPic.png"),
     pic1: require("@/assets/images/pic1.png"),
-    chat: require("@/assets/images/messenger.png")
+    pic2: require("@/assets/images/pic2.png"),
+    pic3: require("@/assets/images/pic3.png"),
+    chat: require("@/assets/images/messenger.png"),
+    gallery: require("@/assets/images/image-gallery.png"),
 }
 
 export default images
